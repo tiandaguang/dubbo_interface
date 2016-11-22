@@ -1,0 +1,27 @@
+原始工程
+
+
+使用Spring整合Redis
+
+
+遇到的问题
+
+1.redis.clients.jedis.exceptions.JedisConnectionException: java.net.UnknownHostException: localhost  
+
+可能原因
+	1.服务器服务没有启动
+			启动服务
+	2.redis.properties中host 配置为localhost 但是hosts 没有对应
+			解决 修改hosts 或者 在redis.properties中直接使用127.0.0.1
+			
+			
+java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener
+
+是因为 没有添加spring-web
+java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServlet
+
+是因为 没有添加spring-webmvc
+
+这里是本地仓库
+这里是本地仓库
+这里是本地仓库
