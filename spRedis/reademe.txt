@@ -22,6 +22,22 @@ java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServ
 
 是因为 没有添加spring-webmvc
 
-这里是本地仓库
-这里是本地仓库
-这里是本地仓库
+新增打包源码
+	<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
