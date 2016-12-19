@@ -22,6 +22,12 @@ java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServ
 
 是因为 没有添加spring-webmvc
 
+如果还是提示没有可能没有 引入jar
+
+
+需要 选择项目	properties	---deployment assembly -add maven dependes
+
+
 新增打包源码
 	<plugins>
 			<plugin>
