@@ -31,7 +31,6 @@ public class TestCluster {
 		System.out.println(jedisCluster);
 		// redis内部会创建连接池，从连接池中获取连接使用，然后再把连接返回给连接池
 		String string = jedisCluster.get("name");
-		String haha = jedisCluster.set("haha", "hahahaa");
 		Assert.assertEquals(string, "tianda111");
 	}
 }
