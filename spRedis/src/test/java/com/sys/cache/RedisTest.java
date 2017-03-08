@@ -50,7 +50,7 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
 	@Test
 	public void testAddUsers1() {
 		List<User> list = new ArrayList<User>();
-		for (int i = 10; i < 50000; i++) {
+		for (int i = 10; i < 100; i++) {
 			User user = new User();
 			user.setId("user" + i);
 			user.setName("java2000_wl" + i);
@@ -70,7 +70,7 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
 	@Test
 	public void testAddUsers2() {
 		List<User> list = new ArrayList<User>();
-		for (int i = 10; i < 1500000; i++) {
+		for (int i = 10; i < 100; i++) {
 			User user = new User();
 			user.setId("user" + i);
 			user.setName("java2000_wl" + i);

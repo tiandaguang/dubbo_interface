@@ -47,3 +47,12 @@ java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServ
 				</executions>
 			</plugin>
 		</plugins>
+		
+		
+
+2017年3月8号
+
+新增redis3.0.7 cluster 模式集群 使用jedis 2.9.0 访问集群
+
+如果需要运行RedisTest 需要把jedis改回 2.6.0或者以前
+
