@@ -28,6 +28,8 @@ public interface ValidationService {
 	@interface Delete {
 	}
 
-	void delete(@Min(1) long id, @NotNull @Size(min = 2, max = 16) @Pattern(regexp = "^[a-zA-Z]+$") String operator);
+	// void delete(@Min(1) long id, @NotNull @Size(min = 2, max = 16)
+	// @Pattern(regexp = "^[a-zA-Z]+$") String operator);
+	void delete(ValidationParameter parameter);
 
 }
