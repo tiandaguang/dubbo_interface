@@ -43,9 +43,9 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
 		}
 	}
 
-	 /**
-	 * 批量新增 普通方式
-	 * <br>------------------------------<br>
+	/**
+	 * 批量新增 普通方式 <br>
+	 * ------------------------------<br>
 	 */
 	@Test
 	public void testAddUsers1() {
@@ -82,10 +82,9 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
 		Assert.assertTrue(result);
 	}
 
-	
-	 /**
-	 * 修改
-	 * <br>------------------------------<br>
+	/**
+	 * 修改 <br>
+	 * ------------------------------<br>
 	 */
 	@Test
 	public void testUpdate() {
@@ -96,10 +95,9 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
 		Assert.assertTrue(result);
 	}
 
-	
-	 /**
-	 * 通过key删除单个
-	 * <br>------------------------------<br>
+	/**
+	 * 通过key删除单个 <br>
+	 * ------------------------------<br>
 	 */
 	@Test
 	public void testDelete() {
@@ -107,37 +105,37 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
 		userDao.delete(key);
 	}
 
-	
-	 /**
-	 * 批量删除
-	 * <br>------------------------------<br>
+	/**
+	 * 批量删除 <br>
+	 * ------------------------------<br>
 	 */
-	 @Test
-	 public void testDeletes() {
-	 List<String> list = new ArrayList<String>();
-	 for (int i = 0; i < 10; i++) {
-	 list.add("user" + i);
-	 }
-	 userDao.delete(list);
-	 }
-	
-	 /**
-	 * 获取
-	 * <br>------------------------------<br>
+	@Test
+	public void testDeletes() {
+		List<String> list = new ArrayList<String>();
+		for (int i = 0; i < 10; i++) {
+			list.add("user" + i);
+		}
+		userDao.delete(list);
+	}
+
+	/**
+	 * 获取 <br>
+	 * ------------------------------<br>
 	 */
 	@Test
 	public void testGetUser() {
 		String id = "user3";
 		User user = userDao.get(id);
-		System.out.println("user"+user);
+		System.out.println("user" + user);
 		Assert.assertNotNull(user);
 		Assert.assertEquals(user.getName(), "Tianda111");
 	}
 
-	
-	 /**
+	/**
 	 * 设置userDao
-	 * @param userDao the userDao to set
+	 * 
+	 * @param userDao
+	 *            the userDao to set
 	 */
 	public void setUserDao(IUserDao userDao) {
 		this.userDao = userDao;
