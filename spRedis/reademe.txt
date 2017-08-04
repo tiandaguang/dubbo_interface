@@ -12,17 +12,22 @@
 			解决 修改hosts 或者 在redis.properties中直接使用127.0.0.1
 			
 			
-java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener
+2.java.lang.ClassNotFoundException: org.springframework.web.context.ContextLoaderListener
 
 是因为 没有添加spring-web
-java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServlet
+3.java.lang.ClassNotFoundException: org.springframework.web.servlet.DispatcherServlet
 
 是因为 没有添加spring-webmvc
 
 如果还是提示没有可能没有 引入jar
 
+4. Caused by: java.lang.NoSuchMethodError: redis.clients.jedis.JedisShardInfo.setTimeout(I)V
+
+更换jedis 版本到2.6.2以下
+
 
 需要 选择项目	properties	---deployment assembly -add maven dependes
+如果没有add maven dependes ,需要先maven -disable maven nature ，然后再configure-convert to mave project
 
 
 新增打包源码
