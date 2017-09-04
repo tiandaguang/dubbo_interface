@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="  
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd  
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd  
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<!--引入配置属性文件 -->
+	<context:property-placeholder location="classpath*:*.properties" />
+
+	<!-- 自动扫描 -->
+	<context:component-scan base-package="com.odao" />
+
+	<!-- 配置连接odao_mobile库的数据源 -->
+	<bean id="odaoMobile" class="com.atomikos.jdbc.nonxa.AtomikosNonXADataSourceBean">
+		<!-- value只要两个数据源不同就行，随便取名 -->
+		<property name="uniqueResourceName" value="odaoMobileDB" />
+		<property name="driverClassName">
+			<value>${odaoMobile.jdbc.driver}</value>
+		</property>
+		<property name="url">
+			<value>${odaoMobile.jdbc.url}</value>
+		</property>
+		<property name="user">
+			<value>${odaoMobile.jdbc.username}</value>
+		</property>
+		<property name="password">
+			<value>${odaoMobile.jdbc.password}</value>
+		</property>
+	</bean>
+
+	<!-- 配置连接odao_admin库的数据源 -->
+	<bean id="odaoAdmin" class="com.atomikos.jdbc.nonxa.AtomikosNonXADataSourceBean">
+		<!-- value只要两个数据源不同就行，随便取名 -->
+		<property name="uniqueResourceName" value="odaoAdminDB" />
+		<property name="driverClassName">
+			<value>${odaoAdmin.jdbc.driver}</value>
+		</property>
+		<property name="url">
+			<value>${odaoAdmin.jdbc.url}</value>
+		</property>
+		<property name="user">
+			<value>${odaoAdmin.jdbc.username}</value>
+		</property>
+		<property name="password">
+			<value>${odaoAdmin.jdbc.password}</value>
+		</property>
+	</bean>
+
+	<bean id="webSiteSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="odaoMobile" />
+		<property name="mapperLocations" value="classpath:mapper/TdWebsiteMapper.xml" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.odao.dao.website" />
+		<property name="sqlSessionFactoryBeanName" value="webSiteSqlSessionFactory" />
+	</bean>
+
+	<bean id="tdUserService" class="com.odao.service.TdUserService"></bean>
+	<bean id="adminSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="odaoAdmin" />
+		<property name="mapperLocations" value="classpath:mapper/TdAdminMapper.xml" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.odao.dao.admin" />
+		<property name="sqlSessionFactoryBeanName" value="adminSqlSessionFactory" />
+	</bean>
+
+	<bean id="atomikosTransactionManager" class="com.atomikos.icatch.jta.UserTransactionManager" init-method="init" destroy-method="close">
+		<property name="forceShutdown">
+			<value>true</value>
+		</property>
+	</bean>
+	<bean id="atomikosUserTransaction" class="com.atomikos.icatch.jta.UserTransactionImp">
+		<property name="transactionTimeout" value="300" />
+	</bean>
+
+	<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="transactionManager">
+			<ref bean="atomikosTransactionManager" />
+		</property>
+		<property name="userTransaction">
+			<ref bean="atomikosUserTransaction" />
+		</property>
+		<!-- 必须设置，否则程序出现异常 JtaTransactionManager does not support custom isolation levels by default -->
+		<property name="allowCustomIsolationLevels" value="true" />
+	</bean>
+
+	<aop:config proxy-target-class="true">
+		<aop:advisor pointcut="execution(* *com.odao.service..*(..))" advice-ref="txAdvice" />
+	</aop:config>
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="insert*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="add*" propagation="REQUIRED" rollback-for="java.lang.Exception" />
+			<tx:method name="save*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="delete*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="del*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="update*" propagation="REQUIRED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+</beans>

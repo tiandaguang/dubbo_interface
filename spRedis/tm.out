@@ -1,0 +1,129 @@
+17-09-04 19:12:44,489 [main] Logfile closed: E:\git\springRedis\spRedis\.\tmlog-1.log
+17-09-04 19:12:44,553 [main] USING core version: 3.7.0
+17-09-04 19:12:44,555 [main] USING com.atomikos.icatch.console_file_name = tm.out
+17-09-04 19:12:44,556 [main] USING com.atomikos.icatch.console_file_count = 1
+17-09-04 19:12:44,557 [main] USING com.atomikos.icatch.automatic_resource_registration = true
+17-09-04 19:12:44,558 [main] USING com.atomikos.icatch.client_demarcation = false
+17-09-04 19:12:44,558 [main] USING com.atomikos.icatch.threaded_2pc = false
+17-09-04 19:12:44,559 [main] USING com.atomikos.icatch.serial_jta_transactions = true
+17-09-04 19:12:44,560 [main] USING com.atomikos.icatch.log_base_dir = .\
+17-09-04 19:12:44,561 [main] USING com.atomikos.icatch.console_log_level = INFO
+17-09-04 19:12:44,562 [main] USING com.atomikos.icatch.max_actives = 50
+17-09-04 19:12:44,563 [main] USING com.atomikos.icatch.checkpoint_interval = 500
+17-09-04 19:12:44,564 [main] USING com.atomikos.icatch.enable_logging = true
+17-09-04 19:12:44,565 [main] USING com.atomikos.icatch.output_dir = .\
+17-09-04 19:12:44,566 [main] USING com.atomikos.icatch.log_base_name = tmlog
+17-09-04 19:12:44,567 [main] USING com.atomikos.icatch.console_file_limit = -1
+17-09-04 19:12:44,567 [main] USING com.atomikos.icatch.max_timeout = 300000
+17-09-04 19:12:44,568 [main] USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+17-09-04 19:12:44,569 [main] USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+17-09-04 19:12:44,570 [main] USING java.naming.provider.url = rmi://localhost:1099
+17-09-04 19:12:44,571 [main] USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+17-09-04 19:12:44,573 [main] USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+17-09-04 19:12:44,573 [main] USING com.atomikos.icatch.default_jta_timeout = 10000
+17-09-04 19:13:17,953 [main] Starting read of logfile E:\git\springRedis\spRedis\.\tmlog0.log
+17-09-04 19:13:17,954 [main] Done read of logfile
+17-09-04 19:13:17,954 [main] Logfile closed: E:\git\springRedis\spRedis\.\tmlog0.log
+17-09-04 19:13:18,013 [main] USING core version: 3.7.0
+17-09-04 19:13:18,014 [main] USING com.atomikos.icatch.console_file_name = tm.out
+17-09-04 19:13:18,014 [main] USING com.atomikos.icatch.console_file_count = 1
+17-09-04 19:13:18,015 [main] USING com.atomikos.icatch.automatic_resource_registration = true
+17-09-04 19:13:18,015 [main] USING com.atomikos.icatch.client_demarcation = false
+17-09-04 19:13:18,015 [main] USING com.atomikos.icatch.threaded_2pc = false
+17-09-04 19:13:18,016 [main] USING com.atomikos.icatch.serial_jta_transactions = true
+17-09-04 19:13:18,016 [main] USING com.atomikos.icatch.log_base_dir = .\
+17-09-04 19:13:18,017 [main] USING com.atomikos.icatch.console_log_level = INFO
+17-09-04 19:13:18,017 [main] USING com.atomikos.icatch.max_actives = 50
+17-09-04 19:13:18,017 [main] USING com.atomikos.icatch.checkpoint_interval = 500
+17-09-04 19:13:18,017 [main] USING com.atomikos.icatch.enable_logging = true
+17-09-04 19:13:18,018 [main] USING com.atomikos.icatch.output_dir = .\
+17-09-04 19:13:18,018 [main] USING com.atomikos.icatch.log_base_name = tmlog
+17-09-04 19:13:18,018 [main] USING com.atomikos.icatch.console_file_limit = -1
+17-09-04 19:13:18,019 [main] USING com.atomikos.icatch.max_timeout = 300000
+17-09-04 19:13:18,019 [main] USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+17-09-04 19:13:18,020 [main] USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+17-09-04 19:13:18,020 [main] USING java.naming.provider.url = rmi://localhost:1099
+17-09-04 19:13:18,020 [main] USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+17-09-04 19:13:18,020 [main] USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+17-09-04 19:13:18,021 [main] USING com.atomikos.icatch.default_jta_timeout = 10000
+17-09-04 19:16:14,768 [main] Starting read of logfile E:\git\springRedis\spRedis\.\tmlog1.log
+17-09-04 19:16:14,769 [main] Done read of logfile
+17-09-04 19:16:14,769 [main] Logfile closed: E:\git\springRedis\spRedis\.\tmlog1.log
+17-09-04 19:16:14,940 [main] USING core version: 3.7.0
+17-09-04 19:16:14,942 [main] USING com.atomikos.icatch.console_file_name = tm.out
+17-09-04 19:16:14,943 [main] USING com.atomikos.icatch.console_file_count = 1
+17-09-04 19:16:14,944 [main] USING com.atomikos.icatch.automatic_resource_registration = true
+17-09-04 19:16:14,944 [main] USING com.atomikos.icatch.client_demarcation = false
+17-09-04 19:16:14,945 [main] USING com.atomikos.icatch.threaded_2pc = false
+17-09-04 19:16:14,946 [main] USING com.atomikos.icatch.serial_jta_transactions = true
+17-09-04 19:16:14,947 [main] USING com.atomikos.icatch.log_base_dir = .\
+17-09-04 19:16:14,948 [main] USING com.atomikos.icatch.console_log_level = INFO
+17-09-04 19:16:14,949 [main] USING com.atomikos.icatch.max_actives = 50
+17-09-04 19:16:14,950 [main] USING com.atomikos.icatch.checkpoint_interval = 500
+17-09-04 19:16:14,951 [main] USING com.atomikos.icatch.enable_logging = true
+17-09-04 19:16:14,953 [main] USING com.atomikos.icatch.output_dir = .\
+17-09-04 19:16:14,954 [main] USING com.atomikos.icatch.log_base_name = tmlog
+17-09-04 19:16:14,955 [main] USING com.atomikos.icatch.console_file_limit = -1
+17-09-04 19:16:14,956 [main] USING com.atomikos.icatch.max_timeout = 300000
+17-09-04 19:16:14,957 [main] USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+17-09-04 19:16:14,958 [main] USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+17-09-04 19:16:14,959 [main] USING java.naming.provider.url = rmi://localhost:1099
+17-09-04 19:16:14,960 [main] USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+17-09-04 19:16:14,961 [main] USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+17-09-04 19:16:14,962 [main] USING com.atomikos.icatch.default_jta_timeout = 10000
+17-09-04 19:16:15,159 [main] THREADS: using JDK thread pooling...
+17-09-04 19:16:15,222 [main] createCompositeTransaction ( 300000 ): created new ROOT transaction with id com.atomikos.spring.jdbc.tm0000100003
+17-09-04 19:16:15,341 [main] AtomikosNonXADataSourceBean 'odaoAdminDB': getConnection ( null )...
+17-09-04 19:16:15,341 [main] AtomikosNonXADataSourceBean 'odaoAdminDB': init...
+17-09-04 19:16:15,342 [main] AtomikosNonXADataSourceBean 'odaoAdminDB': no testQuery set - the connection pool will not be able to validate the connections!
+17-09-04 19:16:15,342 [main] AtomikosNonXADataSourceBean 'odaoAdminDB': poolSize equals default - this may cause performance problems!
+17-09-04 19:16:15,386 [main] AtomikosNonXADataSourceBean 'odaoAdminDB': initializing with [ uniqueResourceName=odaoAdminDB, maxPoolSize=1, minPoolSize=1, borrowConnectionTimeout=30, maxIdleTime=60, reapTimeout=0, maintenanceInterval=60, testQuery=null, driverClassName=com.mysql.jdbc.Driver, user=dev, url=jdbc:mysql://10.100.146.228:3306/dev?zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;autoReconnectForPools=true loginTimeout=0]
+17-09-04 19:16:16,218 [main] AtomikosNonXADataSourceBean 'odaoAdminDB': getConnection ( null )...
+17-09-04 19:16:16,219 [main] AtomikosNonXADataSourceBean 'odaoAdminDB': init...
+17-09-04 19:16:16,321 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@108f2c81: calling getAutoCommit on vendor connection...
+17-09-04 19:16:16,321 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@108f2c81: calling toString on vendor connection...
+17-09-04 19:16:16,328 [main] addParticipant ( com.atomikos.jdbc.nonxa.AtomikosNonXAParticipant@2123dde6 ) for transaction com.atomikos.spring.jdbc.tm0000100003
+17-09-04 19:16:16,332 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@108f2c81: calling prepareStatement on vendor connection...
+17-09-04 19:16:16,359 [main] AtomikosNonXADataSourceBean 'odaoMobileDB': getConnection ( null )...
+17-09-04 19:16:16,359 [main] AtomikosNonXADataSourceBean 'odaoMobileDB': init...
+17-09-04 19:16:16,359 [main] AtomikosNonXADataSourceBean 'odaoMobileDB': no testQuery set - the connection pool will not be able to validate the connections!
+17-09-04 19:16:16,360 [main] AtomikosNonXADataSourceBean 'odaoMobileDB': poolSize equals default - this may cause performance problems!
+17-09-04 19:16:16,360 [main] AtomikosNonXADataSourceBean 'odaoMobileDB': initializing with [ uniqueResourceName=odaoMobileDB, maxPoolSize=1, minPoolSize=1, borrowConnectionTimeout=30, maxIdleTime=60, reapTimeout=0, maintenanceInterval=60, testQuery=null, driverClassName=com.mysql.jdbc.Driver, user=root, url=jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8 loginTimeout=0]
+17-09-04 19:16:16,377 [main] AtomikosNonXADataSourceBean 'odaoMobileDB': getConnection ( null )...
+17-09-04 19:16:16,377 [main] AtomikosNonXADataSourceBean 'odaoMobileDB': init...
+17-09-04 19:16:16,378 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@2baf4a4a: calling getAutoCommit on vendor connection...
+17-09-04 19:16:16,379 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@2baf4a4a: calling toString on vendor connection...
+17-09-04 19:16:16,380 [main] addParticipant ( com.atomikos.jdbc.nonxa.AtomikosNonXAParticipant@13656ae ) for transaction com.atomikos.spring.jdbc.tm0000100003
+17-09-04 19:16:16,381 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@2baf4a4a: calling prepareStatement on vendor connection...
+17-09-04 19:16:16,428 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@108f2c81: close...
+17-09-04 19:16:16,429 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@2baf4a4a: close...
+17-09-04 19:16:16,432 [main] commit() done (by application) of transaction com.atomikos.spring.jdbc.tm0000100003
+17-09-04 19:16:16,579 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@108f2c81: committing on connection...
+17-09-04 19:16:16,589 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@108f2c81: resetting autoCommit to true
+17-09-04 19:16:16,594 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@2baf4a4a: committing on connection...
+17-09-04 19:16:16,660 [main] atomikos non-xa connection proxy for com.mysql.jdbc.JDBC4Connection@2baf4a4a: resetting autoCommit to true
+17-09-04 19:16:57,768 [main] Starting read of logfile E:\git\springRedis\spRedis\.\tmlog2.log
+17-09-04 19:16:57,816 [main] Done read of logfile
+17-09-04 19:16:57,816 [main] Logfile closed: E:\git\springRedis\spRedis\.\tmlog2.log
+17-09-04 19:16:57,904 [main] USING core version: 3.7.0
+17-09-04 19:16:57,905 [main] USING com.atomikos.icatch.console_file_name = tm.out
+17-09-04 19:16:57,906 [main] USING com.atomikos.icatch.console_file_count = 1
+17-09-04 19:16:57,907 [main] USING com.atomikos.icatch.automatic_resource_registration = true
+17-09-04 19:16:57,908 [main] USING com.atomikos.icatch.client_demarcation = false
+17-09-04 19:16:57,909 [main] USING com.atomikos.icatch.threaded_2pc = false
+17-09-04 19:16:57,910 [main] USING com.atomikos.icatch.serial_jta_transactions = true
+17-09-04 19:16:57,911 [main] USING com.atomikos.icatch.log_base_dir = .\
+17-09-04 19:16:57,912 [main] USING com.atomikos.icatch.console_log_level = INFO
+17-09-04 19:16:57,913 [main] USING com.atomikos.icatch.max_actives = 50
+17-09-04 19:16:57,914 [main] USING com.atomikos.icatch.checkpoint_interval = 500
+17-09-04 19:16:57,915 [main] USING com.atomikos.icatch.enable_logging = true
+17-09-04 19:16:57,917 [main] USING com.atomikos.icatch.output_dir = .\
+17-09-04 19:16:57,918 [main] USING com.atomikos.icatch.log_base_name = tmlog
+17-09-04 19:16:57,919 [main] USING com.atomikos.icatch.console_file_limit = -1
+17-09-04 19:16:57,920 [main] USING com.atomikos.icatch.max_timeout = 300000
+17-09-04 19:16:57,921 [main] USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+17-09-04 19:16:57,922 [main] USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+17-09-04 19:16:57,923 [main] USING java.naming.provider.url = rmi://localhost:1099
+17-09-04 19:16:57,924 [main] USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+17-09-04 19:16:57,925 [main] USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+17-09-04 19:16:57,925 [main] USING com.atomikos.icatch.default_jta_timeout = 10000
