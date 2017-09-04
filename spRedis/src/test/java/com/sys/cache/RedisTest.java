@@ -1,14 +1,14 @@
 package com.sys.cache;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import junit.framework.Assert;
-
+import org.junit.Before;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
+
+import com.odao.model.TdUser;
+import com.odao.service.TdUserService;
 
 /**
  * 测试
@@ -16,128 +16,25 @@ import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
  * @author http://blog.csdn.net/java2000_wl
  * @version <b>1.0</b>
  */
-@ContextConfiguration(locations = { "classpath*:applicationContext.xml" })
+@ContextConfiguration(locations = { "classpath*:spring-mvc.xml" })
 public class RedisTest extends AbstractJUnit4SpringContextTests {
 
-	@Autowired
-	private IUserDao userDao;
+	// @Autowired
+	// private TdUserService tdUserService;
 
-	/**
-	 * 新增 <br>
-	 * ------------------------------<br>
-	 */
-	@Test
-	public void testAddUser() {
-		String key = "user3";
-		User user = userDao.get(key);
-		if (user != null) {
-			userDao.delete(key);
-		} else {
-			user = new User();
-			user.setId(key);
-			user.setName("Tianda");
+	ApplicationContext context = null;
 
-			boolean result = userDao.add(user);
-			System.out.println(result);
-			Assert.assertTrue(result);
-		}
+	@Before
+	public void initContext() {
+		this.context = new FileSystemXmlApplicationContext("classpath:spring-mybatis.xml");
 	}
 
-	/**
-	 * 批量新增 普通方式 <br>
-	 * ------------------------------<br>
-	 */
 	@Test
-	public void testAddUsers1() {
-		List<User> list = new ArrayList<User>();
-		for (int i = 10; i < 100; i++) {
-			User user = new User();
-			user.setId("user" + i);
-			user.setName("java2000_wl" + i);
-			list.add(user);
-		}
-		long begin = System.currentTimeMillis();
-		for (User user : list) {
-			userDao.add(user);
-		}
-		System.out.println(System.currentTimeMillis() - begin);
-	}
-
-	/**
-	 * 批量新增 pipeline方式 <br>
-	 * ------------------------------<br>
-	 */
-	@Test
-	public void testAddUsers2() {
-		List<User> list = new ArrayList<User>();
-		for (int i = 10; i < 100; i++) {
-			User user = new User();
-			user.setId("user" + i);
-			user.setName("java2000_wl" + i);
-			list.add(user);
-		}
-		long begin = System.currentTimeMillis();
-		boolean result = userDao.add(list);
-		System.out.println(System.currentTimeMillis() - begin);
-		Assert.assertTrue(result);
-	}
-
-	/**
-	 * 修改 <br>
-	 * ------------------------------<br>
-	 */
-	@Test
-	public void testUpdate() {
-		User user = new User();
-		user.setId("user3");
-		user.setName("Tianda111");
-		boolean result = userDao.update(user);
-		Assert.assertTrue(result);
-	}
-
-	/**
-	 * 通过key删除单个 <br>
-	 * ------------------------------<br>
-	 */
-	@Test
-	public void testDelete() {
-		String key = "user1";
-		userDao.delete(key);
-	}
-
-	/**
-	 * 批量删除 <br>
-	 * ------------------------------<br>
-	 */
-	@Test
-	public void testDeletes() {
-		List<String> list = new ArrayList<String>();
-		for (int i = 0; i < 10; i++) {
-			list.add("user" + i);
-		}
-		userDao.delete(list);
-	}
-
-	/**
-	 * 获取 <br>
-	 * ------------------------------<br>
-	 */
-	@Test
-	public void testGetUser() {
-		String id = "user3";
-		User user = userDao.get(id);
-		System.out.println("user" + user);
-		Assert.assertNotNull(user);
-		Assert.assertEquals(user.getName(), "Tianda111");
-	}
-
-	/**
-	 * 设置userDao
-	 * 
-	 * @param userDao
-	 *            the userDao to set
-	 */
-	public void setUserDao(IUserDao userDao) {
-		this.userDao = userDao;
+	public void testAdd() {
+		TdUserService tdUserService = (TdUserService) context.getBean("tdUserService");
+		TdUser a = new TdUser(34l, "one");
+		System.out.println(1 / 0);
+		TdUser b = new TdUser(34l, "one");
+		tdUserService.insertSelective(a, b);
 	}
 }
