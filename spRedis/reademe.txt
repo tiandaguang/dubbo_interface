@@ -29,7 +29,6 @@
 需要 选择项目	properties	---deployment assembly -add maven dependes
 如果没有add maven dependes ,需要先maven -disable maven nature ，然后再configure-convert to mave project
 
-
 新增打包源码
 	<plugins>
 			<plugin>
